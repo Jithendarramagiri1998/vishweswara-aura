@@ -29,60 +29,65 @@ export const Navigation = () => {
 
   return (
     <nav 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         isScrolled 
-          ? 'bg-primary/95 backdrop-blur-md shadow-sacred' 
+          ? 'bg-white/90 backdrop-blur-xl shadow-lg border-b border-neutral-200/50' 
           : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
+      <div className="container-premium">
+        <div className="flex items-center justify-between h-20">
+          {/* Premium Logo */}
           <div className="flex-shrink-0">
-            <a href="#home" className="text-xl md:text-2xl font-serif font-bold text-primary-foreground">
+            <a href="#home" className={`text-2xl font-serif font-bold transition-colors duration-300 ${
+              isScrolled ? 'text-primary' : 'text-white'
+            }`}>
               Vishweshwara
             </a>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Premium Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-10">
             {navItems.map((item) => (
               <a
                 key={item.key}
                 href={item.href}
-                className="text-primary-foreground hover:text-accent transition-colors duration-300 font-medium"
+                className={`font-display font-medium tracking-wide transition-all duration-300 relative group ${
+                  isScrolled ? 'text-neutral-700 hover:text-primary' : 'text-white/90 hover:text-accent'
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 {t(`navigation.${item.key}`)}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
           </div>
 
-          {/* Desktop CTA & Language Switcher */}
-          <div className="hidden md:flex items-center space-x-4">
+          {/* Premium Desktop Actions */}
+          <div className="hidden lg:flex items-center space-x-4">
             <LanguageSwitcher />
             <Button
               asChild
-              variant="outline"
-              size="sm"
-              className="btn-outline-sacred border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              className={`btn-ghost ${isScrolled ? 'text-neutral-700 hover:text-primary' : 'text-white hover:text-accent'}`}
             >
               <a href="tel:+919848925249" className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
                 {t('common.call')}
               </a>
             </Button>
-            <WhatsAppButton text={t('common.whatsapp')} />
+            <WhatsAppButton text={t('common.whatsapp')} className="btn-primary" />
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-2">
+          {/* Premium Mobile Menu */}
+          <div className="lg:hidden flex items-center space-x-3">
             <LanguageSwitcher />
             <Button
               variant="ghost"
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-primary-foreground hover:text-accent"
+              className={`transition-colors duration-300 ${
+                isScrolled ? 'text-primary hover:text-accent' : 'text-white hover:text-accent'
+              }`}
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -90,32 +95,34 @@ export const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Premium Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-primary/95 backdrop-blur-md rounded-lg mt-2 shadow-sacred">
-              {navItems.map((item) => (
-                <a
-                  key={item.key}
-                  href={item.href}
-                  className="block px-3 py-2 text-primary-foreground hover:text-accent hover:bg-primary-light/20 rounded-md transition-all duration-300"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {t(`navigation.${item.key}`)}
-                </a>
-              ))}
-              <div className="flex flex-col gap-2 pt-4 border-t border-primary-light/20">
+          <div className="lg:hidden animate-fade-in">
+            <div className="card-premium mt-4 mb-6">
+              <div className="space-y-2">
+                {navItems.map((item) => (
+                  <a
+                    key={item.key}
+                    href={item.href}
+                    className="block px-4 py-3 text-neutral-700 hover:text-primary hover:bg-neutral-50 rounded-xl transition-all duration-200 font-medium"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {t(`navigation.${item.key}`)}
+                  </a>
+                ))}
+              </div>
+              
+              <div className="border-t border-neutral-200 pt-6 mt-6 space-y-3">
                 <Button
                   asChild
-                  variant="outline"
-                  className="btn-outline-sacred w-full"
+                  className="btn-ghost w-full"
                 >
                   <a href="tel:+919848925249" className="flex items-center justify-center gap-2">
                     <Phone className="h-4 w-4" />
                     {t('common.call')}
                   </a>
                 </Button>
-                <WhatsAppButton text={t('common.whatsapp')} className="w-full" />
+                <WhatsAppButton text={t('common.whatsapp')} className="btn-primary w-full" />
               </div>
             </div>
           </div>

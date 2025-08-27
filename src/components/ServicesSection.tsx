@@ -32,58 +32,62 @@ export const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="section-sacred bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="heading-secondary mb-6">
+    <section id="services" className="section-premium bg-white">
+      <div className="container-premium">
+        <div className="text-center mb-20">
+          <h2 className="heading-secondary mb-8">
             {t('services.title')}
           </h2>
-          <p className="text-sacred max-w-2xl mx-auto">
+          <p className="text-lead max-w-3xl mx-auto text-neutral-600">
             Comprehensive Vasthu and Jyothisya solutions tailored to your specific needs and space requirements.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
           {services.map((service, index) => (
             <div 
               key={index}
-              className="group relative bg-card rounded-2xl p-8 shadow-sacred hover:shadow-elevated transition-all duration-500 hover:scale-105 animate-fade-in border border-neutral-200/50"
-              style={{ animationDelay: `${index * 150}ms` }}
+              className="card-sacred interactive-card animate-fade-in"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              {/* Background gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-transparent to-neutral-50/50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
-              {/* Icon */}
-              <div className="relative mb-6">
-                <div className={`w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-xl flex items-center justify-center shadow-golden group-hover:shadow-sacred transition-all duration-300 group-hover:scale-110`}>
-                  <service.icon className="h-8 w-8 text-white" />
+              {/* Premium icon container */}
+              <div className="mb-8">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-2">
+                  <service.icon className="h-10 w-10 text-white" />
                 </div>
               </div>
 
               {/* Content */}
-              <div className="relative">
-                <h3 className="heading-tertiary mb-4 group-hover:text-primary transition-colors duration-300">
+              <div className="space-y-4">
+                <h3 className="heading-quaternary group-hover:text-primary transition-colors duration-300">
                   {t(service.titleKey)}
                 </h3>
                 
-                <p className="text-neutral-600 leading-relaxed group-hover:text-neutral-700 transition-colors duration-300">
+                <p className="text-body group-hover:text-neutral-700 transition-colors duration-300">
                   {t(service.descKey)}
                 </p>
               </div>
 
-              {/* Decorative corner */}
-              <div className="absolute top-4 right-4 w-8 h-8 bg-gradient-to-br from-accent/20 to-accent-dark/20 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:rotate-45"></div>
+              {/* Premium accent line */}
+              <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-accent to-accent-dark transition-all duration-500 group-hover:w-full rounded-b-3xl"></div>
             </div>
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="inline-flex items-center gap-4 bg-accent/10 backdrop-blur-sm border border-accent/20 rounded-2xl px-8 py-4">
-            <Star className="h-6 w-6 text-accent animate-sacred-glow" />
-            <span className="text-primary font-semibold text-lg">
-              Get personalized consultation for your space
-            </span>
+        {/* Premium CTA section */}
+        <div className="text-center mt-24">
+          <div className="card-floating inline-flex items-center gap-6 px-10 py-6 max-w-lg">
+            <div className="w-16 h-16 bg-gradient-to-br from-accent to-accent-dark rounded-2xl flex items-center justify-center animate-pulse">
+              <Star className="h-8 w-8 text-white" />
+            </div>
+            <div className="text-left">
+              <div className="text-primary font-display font-semibold text-xl mb-1">
+                Ready to transform your space?
+              </div>
+              <div className="text-neutral-600 font-medium">
+                Get personalized consultation today
+              </div>
+            </div>
           </div>
         </div>
       </div>

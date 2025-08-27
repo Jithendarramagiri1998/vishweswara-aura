@@ -9,94 +9,95 @@ export const WhyChooseSection = () => {
       icon: Shield,
       titleKey: 'whyChoose.authentic.title',
       descKey: 'whyChoose.authentic.description',
-      color: 'text-blue-600',
-      bgColor: 'bg-blue-100'
     },
     {
       icon: Heart,
       titleKey: 'whyChoose.personalized.title',
       descKey: 'whyChoose.personalized.description',
-      color: 'text-rose-600',
-      bgColor: 'bg-rose-100'
     },
     {
       icon: Wrench,
       titleKey: 'whyChoose.remedies.title', 
       descKey: 'whyChoose.remedies.description',
-      color: 'text-emerald-600',
-      bgColor: 'bg-emerald-100'
     },
     {
       icon: Zap,
       titleKey: 'whyChoose.flexible.title',
       descKey: 'whyChoose.flexible.description',
-      color: 'text-amber-600',
-      bgColor: 'bg-amber-100'
     }
   ];
 
   return (
-    <section id="why-choose" className="section-sacred bg-gradient-to-br from-neutral-50 to-primary/5">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="heading-secondary mb-6">
+    <section id="why-choose" className="section-premium bg-gradient-to-br from-neutral-25 via-white to-neutral-50">
+      {/* Premium background elements */}
+      <div className="sacred-pattern inset-0 opacity-30"></div>
+      
+      <div className="container-premium relative z-10">
+        <div className="text-center mb-20">
+          <h2 className="heading-secondary mb-8">
             {t('whyChoose.title')}
           </h2>
-          <p className="text-sacred max-w-3xl mx-auto text-lg">
+          <p className="text-lead max-w-4xl mx-auto text-neutral-700">
             Experience the perfect blend of traditional wisdom and modern convenience with our comprehensive approach to Vasthu and Jyothisya consulting.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
           {reasons.map((reason, index) => (
             <div 
               key={index}
-              className="group text-center animate-fade-in"
-              style={{ animationDelay: `${index * 200}ms` }}
+              className="card-sacred text-center interactive-card animate-fade-in"
+              style={{ animationDelay: `${index * 150}ms` }}
             >
-              {/* Icon container */}
+              {/* Premium icon container */}
               <div className="relative mb-8">
-                <div className="mx-auto w-24 h-24 bg-card rounded-2xl shadow-sacred group-hover:shadow-golden transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 flex items-center justify-center">
-                  <div className={`w-16 h-16 ${reason.bgColor} rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300`}>
-                    <reason.icon className={`h-8 w-8 ${reason.color}`} />
-                  </div>
+                <div className="mx-auto w-28 h-28 bg-gradient-to-br from-primary to-primary-dark rounded-3xl shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-2 flex items-center justify-center">
+                  <reason.icon className="h-14 w-14 text-white" />
                 </div>
                 
-                {/* Floating accent */}
-                <div className="absolute -top-2 -right-2 w-6 h-6 bg-accent rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-bounce transition-all duration-300 delay-200"></div>
+                {/* Floating accent decoration */}
+                <div className="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-br from-accent to-accent-dark rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-300 delay-200 shadow-golden"></div>
               </div>
 
               {/* Content */}
-              <div className="space-y-4">
-                <h3 className="heading-tertiary group-hover:text-accent transition-colors duration-300">
+              <div className="space-y-6">
+                <h3 className="heading-quaternary group-hover:text-primary-accent transition-colors duration-300">
                   {t(reason.titleKey)}
                 </h3>
                 
-                <p className="text-neutral-600 leading-relaxed px-2">
+                <p className="text-body leading-relaxed">
                   {t(reason.descKey)}
                 </p>
               </div>
 
-              {/* Bottom accent line */}
-              <div className="mt-6 mx-auto w-0 group-hover:w-12 h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent transition-all duration-500"></div>
+              {/* Premium bottom accent */}
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 group-hover:w-20 h-1 bg-gradient-to-r from-transparent via-accent to-transparent transition-all duration-700 rounded-t-full"></div>
             </div>
           ))}
         </div>
 
-        {/* Trust indicators */}
-        <div className="mt-20 bg-card/80 backdrop-blur-sm rounded-2xl p-8 shadow-sacred border border-accent/10">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="space-y-2">
-              <div className="text-3xl font-bold text-primary">5+</div>
-              <div className="text-neutral-600">Years Experience</div>
+        {/* Premium trust indicators */}
+        <div className="mt-28">
+          <div className="card-floating max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <h3 className="heading-quaternary text-primary mb-4">
+                Trusted by families across Telangana
+              </h3>
             </div>
-            <div className="space-y-2">
-              <div className="text-3xl font-bold text-accent">100%</div>
-              <div className="text-neutral-600">Satisfied Clients</div>
-            </div>
-            <div className="space-y-2">
-              <div className="text-3xl font-bold text-primary">24/7</div>
-              <div className="text-neutral-600">Support Available</div>
+            
+            <div className="grid md:grid-cols-3 gap-8 text-center">
+              <div className="group">
+                <div className="text-5xl font-bold text-primary mb-3 group-hover:text-primary-accent transition-colors duration-300">5+</div>
+                <div className="text-neutral-600 font-display font-medium">Years Experience</div>
+              </div>
+              <div className="group">
+                <div className="text-5xl font-bold text-accent mb-3 group-hover:text-accent-dark transition-colors duration-300">100+</div>
+                <div className="text-neutral-600 font-display font-medium">Satisfied Clients</div>
+              </div>
+              <div className="group">
+                <div className="text-5xl font-bold text-primary mb-3 group-hover:text-primary-accent transition-colors duration-300">24/7</div>
+                <div className="text-neutral-600 font-display font-medium">Support Available</div>
+              </div>
             </div>
           </div>
         </div>

@@ -19,14 +19,37 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				serif: ['Playfair Display', 'Georgia', 'serif'],
-				sans: ['Inter', 'system-ui', 'sans-serif'],
+				serif: ['Crimson Text', 'Georgia', 'Times New Roman', 'serif'],
+				sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+				display: ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
+				mono: ['SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', 'Consolas', 'monospace'],
+			},
+			fontSize: {
+				'xs': ['0.75rem', { lineHeight: '1rem' }],
+				'sm': ['0.875rem', { lineHeight: '1.25rem' }],
+				'base': ['1rem', { lineHeight: '1.5rem' }],
+				'lg': ['1.125rem', { lineHeight: '1.75rem' }],
+				'xl': ['1.25rem', { lineHeight: '1.875rem' }],
+				'2xl': ['1.5rem', { lineHeight: '2rem' }],
+				'3xl': ['1.875rem', { lineHeight: '2.25rem' }],
+				'4xl': ['2.25rem', { lineHeight: '2.5rem' }],
+				'5xl': ['3rem', { lineHeight: '1.1' }],
+				'6xl': ['3.75rem', { lineHeight: '1.1' }],
+				'7xl': ['4.5rem', { lineHeight: '1.1' }],
+				'8xl': ['6rem', { lineHeight: '1.1' }],
+				'9xl': ['8rem', { lineHeight: '1.1' }],
 			},
 			spacing: {
+				'4.5': '1.125rem',
 				'18': '4.5rem',
+				'22': '5.5rem',
+				'26': '6.5rem',
 				'72': '18rem',
 				'84': '21rem',
 				'96': '24rem',
+				'104': '26rem',
+				'112': '28rem',
+				'128': '32rem',
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -38,6 +61,7 @@ export default {
 					DEFAULT: 'hsl(var(--primary))',
 					light: 'hsl(var(--primary-light))',
 					dark: 'hsl(var(--primary-dark))',
+					accent: 'hsl(var(--primary-accent))',
 					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
@@ -56,6 +80,7 @@ export default {
 					DEFAULT: 'hsl(var(--accent))',
 					light: 'hsl(var(--accent-light))',
 					dark: 'hsl(var(--accent-dark))',
+					subtle: 'hsl(var(--accent-subtle))',
 					foreground: 'hsl(var(--accent-foreground))'
 				},
 				popover: {
@@ -67,6 +92,7 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				neutral: {
+					25: 'hsl(var(--neutral-25))',
 					50: 'hsl(var(--neutral-50))',
 					100: 'hsl(var(--neutral-100))',
 					200: 'hsl(var(--neutral-200))',
@@ -119,9 +145,21 @@ export default {
 				'float': 'float 3s ease-in-out infinite'
 			},
 			boxShadow: {
+				'xs': 'var(--shadow-xs)',
+				'sm': 'var(--shadow-sm)',
+				'md': 'var(--shadow-md)',
+				'lg': 'var(--shadow-lg)',
+				'xl': 'var(--shadow-xl)',
 				'sacred': 'var(--shadow-sacred)',
 				'golden': 'var(--shadow-golden)',
 				'elevated': 'var(--shadow-elevated)'
+			},
+			backdropBlur: {
+				'xs': '2px',
+				'sm': '4px',
+				'md': '8px',
+				'lg': '12px',
+				'xl': '16px',
 			}
 		}
 	},
