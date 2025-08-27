@@ -1,73 +1,193 @@
-# Welcome to your Lovable project
+# Vishweshwara Vasthu Planning & Jyothisya
 
-## Project info
+A modern, professional website for Vasthu Shastra and Jyothisya consulting services. Built with React, TypeScript, Tailwind CSS, and internationalization support.
 
-**URL**: https://lovable.dev/projects/91295a52-3e63-45d5-83fc-548c498f19e8
+## 🌟 Features
 
-## How can I edit this code?
+- **Modern Design**: Premium spiritual aesthetic with deep blue and gold color palette
+- **Fully Responsive**: Optimized for desktop, tablet, and mobile devices
+- **Multilingual Support**: English and Telugu language options with i18n
+- **SEO Optimized**: Semantic HTML, meta tags, and structured data
+- **Accessible**: WCAG compliant with proper ARIA labels and keyboard navigation
+- **Fast Performance**: Optimized images, lazy loading, and efficient React components
+- **Contact Integration**: WhatsApp and phone call CTAs throughout the site
 
-There are several ways of editing your application.
+## 🚀 Quick Start
 
-**Use Lovable**
+### Prerequisites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/91295a52-3e63-45d5-83fc-548c498f19e8) and start prompting.
+- Node.js (v16 or higher)
+- npm or yarn package manager
 
-Changes made via Lovable will be committed automatically to this repo.
+### Installation
 
-**Use your preferred IDE**
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd vishweshwara-vasthu
+   ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-Follow these steps:
+4. **Open in browser**
+   Navigate to `http://localhost:8080`
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Available Scripts
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 📁 Project Structure
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── assets/              # Images and static assets
+├── components/          # React components
+│   ├── ui/             # Reusable UI components (shadcn)
+│   ├── Navigation.tsx   # Header navigation
+│   ├── HeroSection.tsx  # Hero/landing section
+│   ├── AboutSection.tsx # About section
+│   └── ...             # Other page sections
+├── i18n/               # Internationalization
+│   ├── config.ts       # i18n configuration
+│   └── locales/        # Translation files
+│       ├── en.json     # English translations
+│       └── te.json     # Telugu translations
+├── pages/              # Page components
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+└── index.css           # Global styles and design system
 ```
 
-**Edit a file directly in GitHub**
+## 🎨 Design System
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Colors
+- **Primary**: Deep spiritual blue (`--primary`)
+- **Accent**: Sacred gold (`--accent`) 
+- **Neutrals**: Warm spiritual grays
+- **Gradients**: Sacred geometry inspired
 
-**Use GitHub Codespaces**
+### Typography
+- **Headings**: Playfair Display (serif)
+- **Body Text**: Inter (sans-serif)
+- **Scales**: Responsive typography with proper contrast
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Components
+All components use the design system tokens defined in `src/index.css`:
+- `.btn-sacred` - Primary sacred button style
+- `.btn-golden` - Accent golden button style
+- `.heading-primary` - Main heading styles
+- `.text-sacred` - Body text styles
 
-## What technologies are used for this project?
+## 🌍 Internationalization
 
-This project is built with:
+The website supports English and Telugu languages:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Adding New Languages
+1. Create new locale file in `src/i18n/locales/`
+2. Add translations following the existing JSON structure
+3. Update `src/i18n/config.ts` to include the new language
 
-## How can I deploy this project?
+### Editing Content
+- **English**: Edit `src/i18n/locales/en.json`
+- **Telugu**: Edit `src/i18n/locales/te.json`
 
-Simply open [Lovable](https://lovable.dev/projects/91295a52-3e63-45d5-83fc-548c498f19e8) and click on Share -> Publish.
+## 📞 Contact Configuration
 
-## Can I connect a custom domain to my Lovable project?
+Update contact information in the translation files:
 
-Yes, you can!
+```json
+{
+  "common": {
+    "phone": "+91 98489 25249",
+    "email": "your@email.com"
+  }
+}
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+WhatsApp integration uses the phone number for direct messaging.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 🔧 Customization
+
+### Changing Colors
+Edit the CSS variables in `src/index.css`:
+```css
+:root {
+  --primary: 220 85% 25%;     /* Deep blue */
+  --accent: 45 95% 50%;       /* Sacred gold */
+  /* ... other colors */
+}
+```
+
+### Adding New Sections
+1. Create component in `src/components/`
+2. Import and add to `src/pages/Index.tsx`
+3. Add navigation link in `Navigation.tsx`
+4. Update translations in locale files
+
+### Modifying Images
+Replace images in `src/assets/` and update imports in components.
+
+## 📱 Responsive Design
+
+The website is fully responsive with breakpoints:
+- Mobile: < 768px
+- Tablet: 768px - 1024px  
+- Desktop: > 1024px
+
+## ⚡ Performance
+
+- Images are optimized and lazy-loaded
+- Code splitting with React.lazy()
+- Efficient CSS with Tailwind purging
+- Minimal JavaScript bundles
+
+## 🔍 SEO Features
+
+- Semantic HTML structure
+- Meta tags for social sharing
+- Structured data (JSON-LD)
+- Accessible markup with ARIA labels
+- Clean, crawlable URLs
+
+## 📈 Analytics Ready
+
+The website is ready for analytics integration:
+- Google Analytics 4
+- Facebook Pixel
+- Custom event tracking
+
+## 🚀 Deployment
+
+Build for production:
+```bash
+npm run build
+```
+
+The `dist/` folder contains the production-ready files.
+
+### Deployment Options
+- **Vercel**: Connect GitHub repository for automatic deployment
+- **Netlify**: Drag and drop `dist/` folder or connect repository
+- **Traditional Hosting**: Upload `dist/` contents to web server
+
+## 📧 Support
+
+For questions or support with this website:
+- **Consultant**: Ramagiri Ramesh
+- **Phone**: +91 98489 25249
+- **WhatsApp**: Available for quick responses
+
+## 📄 License
+
+© 2025 Vishweshwara Vasthu Planning & Jyothisya. All rights reserved.

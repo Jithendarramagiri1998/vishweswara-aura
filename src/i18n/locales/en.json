@@ -1,0 +1,108 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About", 
+    "services": "Services",
+    "whyChoose": "Why Choose Us",
+    "process": "Process",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "5+ Years of Experience",
+    "title": "Vishweshwara Vasthu Planning & Jyothisya",
+    "subtitle": "Align your space with positive energy",
+    "ctaWhatsapp": "Book on WhatsApp",
+    "ctaCall": "Call Now"
+  },
+  "about": {
+    "title": "About",
+    "description": "Hello! I'm Ramagiri Ramesh. For the past 5 years, I've been helping families and businesses plan spaces using authentic Vasthu principles and Jyothisya guidance. I provide clear, practical suggestions you can implement immediately—on-site or via online consultation.",
+    "experience": "Experience: 5+ years",
+    "consultation": "On-site & online consultations", 
+    "pricing": "Transparent pricing, simple remedies"
+  },
+  "services": {
+    "title": "Services",
+    "homeVastu": {
+      "title": "Home Vaastu",
+      "description": "Entrance, room placement, remedies, and layout corrections."
+    },
+    "commercialVastu": {
+      "title": "Office / Commercial Vaastu",
+      "description": "Shop/office setup, prosperity & productivity alignment."
+    },
+    "jyothisya": {
+      "title": "Jyothisya Consultation", 
+      "description": "Horoscope-based guidance and practical remedies."
+    },
+    "sitePlanning": {
+      "title": "Site / Layout Planning",
+      "description": "New plot evaluation and blueprint planning as per Vaastu."
+    }
+  },
+  "whyChoose": {
+    "title": "Why Choose Us",
+    "authentic": {
+      "title": "Authentic",
+      "description": "Traditional principles with a modern, practical approach."
+    },
+    "personalized": {
+      "title": "Personalized", 
+      "description": "Recommendations tailored to your family and space."
+    },
+    "remedies": {
+      "title": "Remedies",
+      "description": "Simple, effective corrections without major demolition."
+    },
+    "flexible": {
+      "title": "Flexible",
+      "description": "On-site visits or remote video consultations."
+    }
+  },
+  "process": {
+    "title": "Consultation Process",
+    "step1": {
+      "title": "Initial Discussion",
+      "description": "Understanding your needs and space requirements"
+    },
+    "step2": {
+      "title": "Detailed Analysis", 
+      "description": "Examining plans, photos or visiting the site"
+    },
+    "step3": {
+      "title": "Personalized Recommendations",
+      "description": "Providing tailored solutions and remedies"
+    },
+    "step4": {
+      "title": "Follow-up Support",
+      "description": "Ensuring successful implementation"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "note": "Prefer WhatsApp for quick response.",
+    "consultant": "Consultant: Ramagiri Ramesh",
+    "availability": "Mon-Sat: 9AM-6PM",
+    "address": "Ambam (Y), Yedapalli, Nizamabad, Telangana – 503235",
+    "form": {
+      "name": "Your Name",
+      "phone": "Phone Number", 
+      "email": "Email Address",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "required": "This field is required"
+    }
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Information", 
+    "followUs": "Follow Us",
+    "copyright": "© 2025 Vishweshwara Vasthu Planning & Jyothisya. All rights reserved."
+  },
+  "common": {
+    "whatsapp": "WhatsApp",
+    "call": "Call",
+    "email": "example@email.com",
+    "phone": "+91 98489 25249"
+  }
+}

@@ -1,13 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Suspense } from 'react';
+import { Navigation } from '@/components/Navigation';
+import { HeroSection } from '@/components/HeroSection';
+import { AboutSection } from '@/components/AboutSection';
+import { ServicesSection } from '@/components/ServicesSection';
+import { WhyChooseSection } from '@/components/WhyChooseSection';
+import { ProcessSection } from '@/components/ProcessSection';
+import { ContactSection } from '@/components/ContactSection';
+import { Footer } from '@/components/Footer';
+import { WhatsAppButton } from '@/components/WhatsAppButton';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <Suspense fallback={<div className="min-h-screen bg-primary flex items-center justify-center">
+      <div className="animate-spin w-8 h-8 border-4 border-accent border-t-transparent rounded-full"></div>
+    </div>}>
+      <div className="min-h-screen bg-background">
+        <Navigation />
+        <main>
+          <HeroSection />
+          <AboutSection />
+          <ServicesSection />
+          <WhyChooseSection />
+          <ProcessSection />
+          <ContactSection />
+        </main>
+        <Footer />
+        <WhatsAppButton variant="floating" />
       </div>
-    </div>
+    </Suspense>
   );
 };
 
