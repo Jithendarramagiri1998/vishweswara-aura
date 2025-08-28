@@ -186,7 +186,8 @@ All colors MUST be HSL for consistency and theming.
   }
   
   .card-sacred {
-    @apply bg-gradient-card backdrop-blur-xl rounded-3xl p-8 shadow-sacred hover:shadow-elevated transition-all duration-500 border border-white/20 hover:-translate-y-2 group;
+    @apply backdrop-blur-xl rounded-3xl p-8 shadow-sacred hover:shadow-elevated transition-all duration-500 border border-white/20 hover:-translate-y-2 group;
+    background: var(--gradient-card);
   }
   
   .card-floating {
