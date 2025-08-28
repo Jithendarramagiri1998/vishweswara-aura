@@ -191,7 +191,7 @@ All colors MUST be HSL for consistency and theming.
   }
   
   .card-floating {
-    @apply bg-white/90 backdrop-blur-xl rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-400 border border-neutral-200/30 hover:-translate-y-3 animate-float;
+    @apply bg-white/90 backdrop-blur-xl rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-neutral-200/30 hover:-translate-y-3 animate-float;
   }
   
   /* Sacred Geometry Patterns */
