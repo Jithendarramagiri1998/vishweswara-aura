@@ -107,7 +107,7 @@ export const AboutSection = () => {
                   </div>
                   
                   <div className="text-neutral-600 font-medium text-lg">
-                    Certified Vasthu & Jyothisya Consultant
+                    Vasthu & Jyothisya Consultant
                   </div>
                   
                   <div className="card-premium text-center bg-gradient-to-r from-neutral-25 to-neutral-50 border-l-4 border-accent">
