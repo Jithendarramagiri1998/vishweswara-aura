@@ -38,21 +38,23 @@ export const Navigation = () => {
       <div className="container-premium">
         <div className="flex items-center justify-between h-20">
           {/* Premium Logo */}
-          <div className="flex-shrink-0">
-            <a href="#home" className={`text-xl font-serif font-bold transition-colors duration-300 ${
+          <div className="flex-shrink-0 max-w-[200px] sm:max-w-[280px] md:max-w-none">
+            <a href="#home" className={`text-sm sm:text-base md:text-lg lg:text-xl font-serif font-bold transition-colors duration-300 leading-tight ${
               isScrolled ? 'text-primary' : 'text-white'
             }`}>
-              Vishweshwara Vasthu Planner & Jyothisya
+              <span className="block sm:hidden">Vishweshwara Vasthu</span>
+              <span className="hidden sm:block md:hidden">Vishweshwara Vasthu Planner</span>
+              <span className="hidden md:block">Vishweshwara Vasthu Planner & Jyothisya</span>
             </a>
           </div>
 
           {/* Premium Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-10">
+          <div className="hidden lg:flex items-center space-x-4 xl:space-x-8 2xl:space-x-10">
             {navItems.map((item) => (
               <a
                 key={item.key}
                 href={item.href}
-                className={`font-display font-medium tracking-wide transition-all duration-300 relative group ${
+                className={`font-display font-medium text-sm xl:text-base tracking-wide transition-all duration-300 relative group whitespace-nowrap ${
                   isScrolled ? 'text-neutral-700 hover:text-primary' : 'text-white/90 hover:text-accent'
                 }`}
                 onClick={() => setIsOpen(false)}
@@ -64,33 +66,35 @@ export const Navigation = () => {
           </div>
 
           {/* Premium Desktop Actions */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-2 xl:space-x-4">
             <LanguageSwitcher />
             <Button
               asChild
-              className={`btn-ghost ${isScrolled ? 'text-neutral-700 hover:text-primary' : 'text-white hover:text-accent'}`}
+              size="sm"
+              className={`btn-ghost text-xs xl:text-sm ${isScrolled ? 'text-neutral-700 hover:text-primary' : 'text-white hover:text-accent'}`}
             >
-              <a href="tel:+919848925249" className="flex items-center gap-2">
-                <Phone className="h-4 w-4" />
-                {t('common.call')}
+              <a href="tel:+919848925249" className="flex items-center gap-1 xl:gap-2">
+                <Phone className="h-3 w-3 xl:h-4 xl:w-4" />
+                <span className="hidden xl:inline">{t('common.call')}</span>
+                <span className="xl:hidden">Call</span>
               </a>
             </Button>
-            <WhatsAppButton text={t('common.whatsapp')} className="btn-primary" />
+            <WhatsAppButton text={t('common.whatsapp')} className="btn-primary text-xs xl:text-sm" />
           </div>
 
           {/* Premium Mobile Menu */}
-          <div className="lg:hidden flex items-center space-x-3">
+          <div className="lg:hidden flex items-center space-x-2">
             <LanguageSwitcher />
             <Button
               variant="ghost"
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
-              className={`transition-colors duration-300 ${
+              className={`transition-colors duration-300 p-2 ${
                 isScrolled ? 'text-primary hover:text-accent' : 'text-white hover:text-accent'
               }`}
               aria-label="Toggle menu"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
         </div>

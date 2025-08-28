@@ -94,13 +94,6 @@ export const AboutSection = () => {
                 </h3>
                 
                 <div className="space-y-4">
-                  <div className="inline-flex items-center gap-3 bg-accent/10 rounded-2xl px-6 py-3">
-                    <Award className="h-6 w-6 text-accent" />
-                    <span className="text-accent-gradient font-display font-semibold text-lg">
-                      Certified Expert
-                    </span>
-                  </div>
-                  
                   <div className="inline-flex items-center gap-3 bg-primary/10 rounded-2xl px-6 py-3">
                     <MapPin className="h-6 w-6 text-primary" />
                     <a 
