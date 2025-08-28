@@ -46,7 +46,7 @@ export const WhyChooseSection = () => {
           {reasons.map((reason, index) => (
             <div 
               key={index}
-              className="card-sacred text-center interactive-card animate-fade-in"
+              className="card-sacred text-center interactive-card animate-fade-in group"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Premium icon container */}

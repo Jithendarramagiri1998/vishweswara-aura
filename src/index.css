@@ -253,7 +253,7 @@ All colors MUST be HSL for consistency and theming.
   
   /* Premium Interactive Elements */
   .interactive-card {
-    @apply group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl;
+    @apply cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl;
   }
   
   .hover-glow {
