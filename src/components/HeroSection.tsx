@@ -29,13 +29,6 @@ export const HeroSection = () => {
       {/* Content */}
       <div className="container-premium relative z-10 text-center">
         <div className="max-w-5xl mx-auto">
-          {/* Premium eyebrow */}
-          <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full px-8 py-3 mb-12 animate-fade-in">
-            <div className="w-2.5 h-2.5 bg-accent rounded-full animate-pulse"></div>
-            <span className="text-accent-light font-display font-medium text-base tracking-wide">
-              {t('hero.eyebrow')}
-            </span>
-          </div>
 
           {/* Hero headline */}
           <h1 className="heading-display mb-8 text-white animate-fade-in" style={{ animationDelay: '200ms' }}>

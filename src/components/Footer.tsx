@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Phone, Mail, MapPin, Facebook, Linkedin } from 'lucide-react';
+import { Phone, MapPin } from 'lucide-react';
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -13,20 +13,6 @@ export const Footer = () => {
     { key: 'contact', href: '#contact' },
   ];
 
-  const socialLinks = [
-    {
-      name: 'Facebook',
-      icon: Facebook,
-      href: '#',
-      color: 'hover:text-blue-600'
-    },
-    {
-      name: 'LinkedIn', 
-      icon: Linkedin,
-      href: '#',
-      color: 'hover:text-blue-700'
-    }
-  ];
 
   return (
     <footer className="bg-primary-dark text-primary-foreground">
@@ -39,23 +25,9 @@ export const Footer = () => {
             </h3>
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
               Transform your space with authentic Vasthu principles and Jyothisya guidance. 
-              5+ years of experience in creating harmonious environments for homes and businesses.
+              Creating harmonious environments for homes and businesses with traditional wisdom.
             </p>
             
-            {/* Social Links */}
-            <div className="flex items-center gap-4">
-              <span className="text-sm font-medium">{t('footer.followUs')}: </span>
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  aria-label={social.name}
-                  className={`p-2 bg-primary-foreground/10 rounded-lg hover:bg-accent transition-all duration-300 ${social.color}`}
-                >
-                  <social.icon className="h-5 w-5" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -92,18 +64,6 @@ export const Footer = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3">
-                <Mail className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                <div>
-                  <div className="font-medium">Email</div>
-                  <a 
-                    href="mailto:example@email.com" 
-                    className="text-primary-foreground/80 hover:text-accent transition-colors duration-300"
-                  >
-                    {t('common.email')}
-                  </a>
-                </div>
-              </div>
 
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />

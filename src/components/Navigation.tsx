@@ -39,10 +39,10 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Premium Logo */}
           <div className="flex-shrink-0">
-            <a href="#home" className={`text-2xl font-serif font-bold transition-colors duration-300 ${
+            <a href="#home" className={`text-xl font-serif font-bold transition-colors duration-300 ${
               isScrolled ? 'text-primary' : 'text-white'
             }`}>
-              Vishweshwara
+              Vishweshwara Vasthu Planner & Jyothisya
             </a>
           </div>
 

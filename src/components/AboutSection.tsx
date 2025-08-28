@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import { CheckCircle, Award, Users, Clock } from 'lucide-react';
+import { CheckCircle, Award, Users, MapPin } from 'lucide-react';
 import sacredPattern from '@/assets/sacred-pattern.jpg';
+import consultantPhoto from '@/assets/consultant-photo.jpg';
 
 export const AboutSection = () => {
   const { t } = useTranslation();
@@ -79,9 +80,13 @@ export const AboutSection = () => {
             {/* Premium consultant card */}
             <div className="card-floating relative group">
               <div className="text-center">
-                {/* Premium avatar */}
-                <div className="w-28 h-28 bg-gradient-to-br from-primary via-primary-accent to-primary-dark rounded-full flex items-center justify-center mx-auto mb-8 shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110">
-                  <Clock className="h-14 w-14 text-white" />
+                {/* Professional consultant photo */}
+                <div className="w-28 h-28 rounded-full overflow-hidden mx-auto mb-8 shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110 border-4 border-accent/20">
+                  <img 
+                    src={consultantPhoto} 
+                    alt="Ramagiri Ramesh - Vasthu & Jyothisya Consultant"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 
                 <h3 className="heading-tertiary mb-6 group-hover:text-primary-accent transition-colors duration-300">
@@ -92,8 +97,20 @@ export const AboutSection = () => {
                   <div className="inline-flex items-center gap-3 bg-accent/10 rounded-2xl px-6 py-3">
                     <Award className="h-6 w-6 text-accent" />
                     <span className="text-accent-gradient font-display font-semibold text-lg">
-                      5+ Years Experience
+                      Certified Expert
                     </span>
+                  </div>
+                  
+                  <div className="inline-flex items-center gap-3 bg-primary/10 rounded-2xl px-6 py-3">
+                    <MapPin className="h-6 w-6 text-primary" />
+                    <a 
+                      href="https://maps.app.goo.gl/GJLwvnkbnzRSkuCaA"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary-gradient font-display font-semibold text-lg hover:underline"
+                    >
+                      View Location
+                    </a>
                   </div>
                   
                   <div className="text-neutral-600 font-medium text-lg">
