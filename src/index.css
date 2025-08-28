@@ -166,7 +166,8 @@ All colors MUST be HSL for consistency and theming.
   }
   
   .section-sacred {
-    @apply relative py-28 overflow-hidden bg-gradient-subtle;
+    @apply relative py-28 overflow-hidden;
+    background: var(--gradient-subtle);
   }
   
   .section-sacred::before {
